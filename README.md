@@ -6,4 +6,6 @@ Simple project with supervised ML algorithms to predict using regresion (or clas
 This project use the gitflow strategy (master>develop>features/hotfix...).  
 Pushing a new feature will open a PR (Pull Request) that will be open until the crew check it and approve it to merge or deny it.
 
+The strategy to merge a Pull Request is **Squash and Merge**. So only the title of the PR will be taken as commit in the develop branch.
+
 ![image](https://user-images.githubusercontent.com/20076843/115489707-411dec80-a222-11eb-96e2-aeded50a3573.png)
