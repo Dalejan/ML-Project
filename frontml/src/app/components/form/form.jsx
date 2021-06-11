@@ -27,85 +27,80 @@ const Formulario = () => {
 
   return (
     <Fragment>
-      <h1>Formulario</h1>
-      <form className="row" onSubmit={enviarDatos}>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Latitud"
-            className="form-control"
-            onChange={handleInputChange}
-            name="lat"
-          ></input>
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Longitud"
-            className="form-control"
-            onChange={handleInputChange}
-            name="lon"
-          ></input>
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Numero de Cuartos en general"
-            className="form-control"
-            onChange={handleInputChange}
-            name="rooms"
-          ></input>
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Numero de Dormitorios"
-            className="form-control"
-            onChange={handleInputChange}
-            name="bedrooms"
-          ></input>
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Numero de Baños"
-            className="form-control"
-            onChange={handleInputChange}
-            name="bathrooms"
-          ></input>
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Superficie Total"
-            className="form-control"
-            onChange={handleInputChange}
-            name="surface_total"
-          ></input>
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Superficie Construida"
-            className="form-control"
-            onChange={handleInputChange}
-            name="surface_covered"
-          ></input>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Enviar
-        </button>
-      </form>
-
-      <ul>
-        <li>{datos.lat}</li>
-        <li>{datos.lon}</li>
-        <li>{datos.rooms}</li>
-        <li>{datos.bedrooms}</li>
-        <li>{datos.bathrooms}</li>
-        <li>{datos.surface_total}</li>
-        <li>{datos.surface_covered}</li>
-      </ul>
+      <div className="container">
+        <h2 className="display-5">Predictor del precio de una casa con ML</h2>
+        <form className="row" onSubmit={enviarDatos}>
+          <div className="col-md-3 ">
+            <label className="form-label">Latitud</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="lat"
+            ></input>
+          </div>
+          <div className="col-md-3">
+            <label className="form-label">Longitud</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="lon"
+            ></input>
+          </div>
+          <div className="col-md-3">
+            <label className="form-label">Numero de Salas</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="rooms"
+            ></input>
+          </div>
+          <div className="col-md-3">
+            <label className="form-label">Numero de Dormitorios</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="bedrooms"
+            ></input>
+          </div>
+          <div className="col-md-3">
+            <label className="form-label">Numero de Baños</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="bathrooms"
+            ></input>
+          </div>
+          <div className="col-md-3">
+            <label className="form-label">Superficie Total</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="surface_total"
+            ></input>
+          </div>
+          <div className="col-md-3">
+            <label className="form-label">Superficie Construida</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={handleInputChange}
+              name="surface_covered"
+            ></input>
+          </div>
+          <div className="contenedor-boton">
+          <button type="submit" className="enviar btn btn-dark">
+            Enviar
+          </button>
+          </div>
+        </form>
+      </div>
+      <h3 className="resultado display-6">Resultado:</h3>
     </Fragment>
   );
 };
