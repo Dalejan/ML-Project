@@ -1,10 +1,12 @@
-version: 3.9
+version: "3.9"
 services:
-    frontend:
-      build: ./frontend
-      ports:
-        - "5000:5000"
-      links:
-        - backend
+    # frontend:
+    #   build: ./frontend
+    #   ports:
+    #     - "5000:5000"
+    #   links:
+    #     - backend
     backend:
-      image: redis
+      image: "davalejo/flask-api:latest"
+      ports: 
+        - "5000:5000"
